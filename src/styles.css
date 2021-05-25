@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "YoungSerif";
+  src: url("//db.onlinewebfonts.com/t/d18acb2db67fb3aae1ccd198d37a10e9.eot");
+  src: url("//db.onlinewebfonts.com/t/d18acb2db67fb3aae1ccd198d37a10e9.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/d18acb2db67fb3aae1ccd198d37a10e9.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/d18acb2db67fb3aae1ccd198d37a10e9.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/d18acb2db67fb3aae1ccd198d37a10e9.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/d18acb2db67fb3aae1ccd198d37a10e9.svg#YoungSerif")
+      format("svg");
+}
+
+html,
+body {
+  /* font-family: "YoungSerif", Helvetica, Arial, sans-serif; */
+  font-family: "Josefin Sans", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 6rem;
+  color: black;
+  line-height: 2em;
+}
+
+figure {
+  background: #fff;
+  margin: 0;
+  position: relative;
+  width: 50vw;
+}
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0);
+  z-index: 1;
+}
+.imageFit {
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  width: 50%;
+}
+
+.notext {
+  display: none;
+  visibility: hidden;
+}
+
+figcaption {
+  color: red;
+  font-size: 20px;
+  z-index: 1;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 10vh;
+  text-decoration: underline overline;
+  font-family: "YoungSerif", sans-serif;
+}
+
+/* .diapotext {
+  height: 100px;
+  background-color: white;
+  color: black;
+  font-size: 10px;
+} */
+/* .text {
+  /* background-color: white; */
+/* position: absolute;
+  font-family: "Avenir", sans-serif;
+  padding: 25%;
+  font-weight: 900;
+  font-size: 40px;
+  font-style: bold;
+  text-decoration: underline overline;
+} */
+
+/* .notext {
+  visibility: hidden;
+} */

@@ -1,0 +1,26 @@
+          {/* <div>
+            {Object.values(diaporama.diapo).map((diapo, index) => {
+              // console.log(diapo.image, "hello");
+              return (
+                <div key={`${index}-${diaporama.id}`}>
+                  <div
+                    style={{
+                      color: "black",
+                      fontSize: 25,
+                      fontWeigh: "bold",
+                      fontFamily: "Avenir"
+                    }}
+                  >
+                    {diapo.text}
+                  </div>
+                  <img
+                    alt={diapo.alt}
+                    src={diapo.image}
+                    width={900}
+                    height={900}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div> */}

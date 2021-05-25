@@ -1,0 +1,51 @@
+import React from "react";
+import Images from "../images.js";
+import useSound from "use-sound";
+import click from "../../public/sound/single-click-slide-pojector.mp3";
+import { useState, useEffect } from "react";
+
+export default function Flicker() {
+  const [flip, setFlip] = useState(true);
+  const [imageNumber, setImageNumber] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(0);
+  const [sound] = useSound(click, { volume: 0.1 });
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      if (isPlaying) {
+        setFlip((flip) => !flip);
+        setTimeout(() => setFlip(false), 2000);
+        setImageNumber(
+          (imageNumber) =>
+            // imageNumber >= 4 ? 0 : imageNumber + 1
+            (imageNumber + 1) % 4
+        );
+        sound();
+      }
+    }, 1500);
+    return () => clearInterval(id);
+  }, [isPlaying, sound]);
+
+  const boxClass = flip ? "boxFlickerBlack" : "boxFlickerClear";
+  const diaporama = Images[imageNumber];
+  const textDisplay = flip ? "text" : "notext";
+  return (
+    <>
+      <div
+        onMouseEnter={() => {
+          setIsPlaying(true);
+        }}
+        onMouseLeave={() => {
+          setFlip(true);
+          setIsPlaying(false);
+          // diaporama.image[0];
+          //reset slide show to first text
+        }}
+      >
+        <div className={boxClass} />
+        <div className={textDisplay}>{diaporama.text}</div>
+        <img className="imageFit" alt={diaporama.alt} src={diaporama.image} />
+      </div>
+    </>
+  );
+}

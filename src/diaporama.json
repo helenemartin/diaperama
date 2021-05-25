@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "oh, what a thrill",
+    "diapo": [
+      {
+        "text": "Image1",
+        "image": "/images/animimage1.jpg",
+        "alt": "bla"
+      },
+      {
+        "text": "Image2",
+        "image": "/images/animimage2.jpg",
+        "alt": "bla"
+      },
+      {
+        "text": "Image3",
+        "image": "/images/animimage3.jpg",
+        "alt": "bla"
+      }
+    ]
+  }
+]
