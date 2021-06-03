@@ -8,7 +8,7 @@ export default function Flicker(props) {
   const [flip, setFlip] = useState(true);
   const [imageNumber, setImageNumber] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [sound] = useSound(click, { volume: 0.4 });
+  const [sound] = useSound(click, { volume: 0.2 });
   const timer = useRef(null); // we can save timer in useRef and pass it to child
   const Images = props.diaporama;
 
@@ -17,11 +17,11 @@ export default function Flicker(props) {
     const id = setInterval(() => {
       if (isPlaying) {
         setFlip((flip) => !flip);
-        timer.current = setTimeout(() => setFlip(false), 2000);
+        timer.current = setTimeout(() => setFlip(false), 3000);
         setImageNumber((imageNumber) => (imageNumber + 1) % imagesLength);
         sound();
       }
-    }, 1500);
+    }, 2500);
     return () => clearInterval(id);
   }, [Images.length, isPlaying, sound]);
 
