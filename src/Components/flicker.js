@@ -8,7 +8,7 @@ export default function Flicker(props) {
   const [flip, setFlip] = useState(true);
   const [imageNumber, setImageNumber] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [sound] = useSound(click, { volume: 0.2 });
+  const [sound] = useSound(click, { volume: 0.5 });
   const timer = useRef(null); // we can save timer in useRef and pass it to child
   const Images = props.diaporama;
 
@@ -33,6 +33,7 @@ export default function Flicker(props) {
       <section>
         <header>
           <h1>{props.title}</h1>
+          <p>{props.paragraph}</p>
         </header>
         <figure
           onMouseEnter={() => {
@@ -64,3 +65,5 @@ export default function Flicker(props) {
     </>
   );
 }
+
+// src={process.env.PUBLIC_URL + "/" + item.image}
