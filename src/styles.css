@@ -78,23 +78,26 @@ h2 {
   font-family: "YoungSerif", sans-serif;
 }
 
-/* .diapotext {
-  height: 100px;
-  background-color: white;
-  color: black;
-  font-size: 10px;
-} */
-/* .text {
-  /* background-color: white; */
-/* position: absolute;
-  font-family: "Avenir", sans-serif;
-  padding: 25%;
-  font-weight: 900;
-  font-size: 40px;
-  font-style: bold;
-  text-decoration: underline overline;
-} */
-
-/* .notext {
-  visibility: hidden;
-} */
+@media (max-width: 900px) {
+  section {
+    flex-direction: column;
+  }
+  figure {
+    flex-grow: 1;
+    width: 100vw;
+  }
+  figcaption {
+    font-size: 30px;
+    right: 140px;
+  }
+  img {
+    width: 100%;
+  }
+  h2 {
+    font-size: 20px;
+    position: relative;
+  }
+  h1 {
+    font-size: 80px;
+  }
+}
