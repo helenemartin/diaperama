@@ -58,7 +58,8 @@ export default function Flicker(props) {
           <img
             className=" imageFit "
             alt={diaporama.alt}
-            src={diaporama.image}
+            // src={diaporama.image}
+            src={process.env.PUBLIC_URL + "/" + diaporama.image}
           />
         </figure>
       </section>
@@ -66,4 +67,4 @@ export default function Flicker(props) {
   );
 }
 
-// src={process.env.PUBLIC_URL + "/" + item.image}
+// src={process.env.PUBLIC_URL + "/" + {props.images}}

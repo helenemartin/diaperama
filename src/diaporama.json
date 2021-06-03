@@ -5,8 +5,8 @@
     "paragraph": "this is it",
     "diapo": [
       {
-        "text": "Image1",
-        "image": "/images/animimage1.jpg",
+        "text": "Image1cccccccccccccc",
+        "image": "./../images/animimage1.jpg",
         "alt": "bla"
       },
       {
